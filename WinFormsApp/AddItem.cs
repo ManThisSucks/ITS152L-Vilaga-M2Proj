@@ -28,7 +28,7 @@ namespace AudioProductsUI
             _item.Model = modelTextBox.Text;
             _item.Variant = variantTextBox.Text;
             _item.Description = descriptionTextBox.Text;
-            _item.Msrp = float.Parse(msrpTextBox.Text);
+            _item.Msrp = msrpTextBox.Text;
             
             this.DialogResult = DialogResult.OK;
             this.Close();

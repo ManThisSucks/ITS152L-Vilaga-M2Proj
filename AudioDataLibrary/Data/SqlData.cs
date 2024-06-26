@@ -18,7 +18,7 @@ namespace AudioDataLibrary.Data
             _db = db;
         }
 
-        public void AddItem(string code, string model, string make, string variant, string description, float msrp)
+        public void AddItem(string code, string model, string make, string variant, string description, string msrp)
         {
             _db.SaveData<dynamic>(
                 "dbo.spItems_Add",
@@ -34,6 +34,12 @@ namespace AudioDataLibrary.Data
                 new { item.Code, item.Model, item.Make, item.Variant, item.Description, item.Msrp },
                 connectionStringName,
                 true);
+        }
+
+        public List<ItemModel> getItems()
+        {
+            return _db.LoadData<ItemModel, dynamic>("dbo.spItems_List", new { },
+                connectionStringName, true).ToList();
         }
     }
 }
