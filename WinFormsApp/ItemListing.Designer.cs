@@ -1,6 +1,6 @@
 ﻿namespace WinFormsApp
 {
-    partial class Form1
+    partial class ItemListing
     {
         /// <summary>
         ///  Required designer variable.
@@ -36,11 +36,15 @@
             item = new ColumnHeader();
             unitPrice = new ColumnHeader();
             itemDetails1 = new ItemDetails();
+            addItemButton = new Button();
+            flowLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
             // flowLayoutPanel1
             // 
             flowLayoutPanel1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            flowLayoutPanel1.Controls.Add(addItemButton);
+            flowLayoutPanel1.FlowDirection = FlowDirection.RightToLeft;
             flowLayoutPanel1.Location = new Point(12, 12);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Size = new Size(776, 44);
@@ -90,6 +94,16 @@
             itemDetails1.Size = new Size(192, 376);
             itemDetails1.TabIndex = 4;
             // 
+            // addItemButton
+            // 
+            addItemButton.Location = new Point(684, 3);
+            addItemButton.Name = "addItemButton";
+            addItemButton.Size = new Size(89, 41);
+            addItemButton.TabIndex = 0;
+            addItemButton.Text = "Add Item";
+            addItemButton.UseVisualStyleBackColor = true;
+            addItemButton.Click += addItemButton_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -100,6 +114,7 @@
             Controls.Add(flowLayoutPanel1);
             Name = "Form1";
             Text = "Form1";
+            flowLayoutPanel1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -111,5 +126,6 @@
         private ColumnHeader item;
         private ColumnHeader unitPrice;
         private ItemDetails itemDetails1;
+        private Button addItemButton;
     }
 }

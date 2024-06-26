@@ -3,11 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35004.147
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AudioDataLibrary", "AudioDataLibrary\AudioDataLibrary.csproj", "{254A8824-749C-4324-8AF6-6AF245598DE0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AudioDataLibrary", "AudioDataLibrary\AudioDataLibrary.csproj", "{254A8824-749C-4324-8AF6-6AF245598DE0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AudioProductUI", "WinFormsApp\AudioProductUI.csproj", "{E56CF116-9C62-4D59-A9FE-5D076F94062A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AudioProductsUI", "WinFormsApp\AudioProductsUI.csproj", "{E56CF116-9C62-4D59-A9FE-5D076F94062A}"
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "AudioProductDatabase", "AudioProductDatabase\AudioProductDatabase.sqlproj", "{267A5C79-F890-4C1D-A863-9BB91A522BC8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B4E6A00A-5E46-439D-8C54-7BAFDCB3C12A}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -17,5 +17,8 @@ namespace AudioDataLibrary.Models
         public string? Description { get; set; }
         public double? Msrp { get; set; }
         public Image? Image { get; set; }
+        public List<ConnectorModel>? InputConnectors { get; set; }
+        public List<ConnectorModel>? OutputConnectors { get; set; }
+
     }
 }

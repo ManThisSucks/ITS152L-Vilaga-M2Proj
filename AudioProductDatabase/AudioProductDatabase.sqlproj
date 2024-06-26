@@ -7,7 +7,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>4.1</ProjectVersion>
     <ProjectGuid>{267a5c79-f890-4c1d-a863-9bb91a522bc8}</ProjectGuid>
-    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql160DatabaseSchemaProvider</DSP>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql150DatabaseSchemaProvider</DSP>
     <OutputType>Database</OutputType>
     <RootPath>
     </RootPath>
@@ -58,6 +58,7 @@
     <Folder Include="Properties" />
     <Folder Include="dbo" />
     <Folder Include="dbo\Tables" />
+    <Folder Include="dbo\Stored Procedures" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\Items.sql" />
@@ -65,8 +66,12 @@
     <Build Include="dbo\Tables\Connectors.sql" />
     <Build Include="dbo\Tables\ItemOutputs.sql" />
     <Build Include="dbo\Tables\ItemInputs.sql" />
+    <Build Include="dbo\Stored Procedures\spItems_Add.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="AudioProductDatabase.refactorlog" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AudioProductDatabase.publish.xml" />
   </ItemGroup>
 </Project>
