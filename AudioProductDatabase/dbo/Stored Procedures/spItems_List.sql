@@ -3,6 +3,6 @@ AS
 begin
 	set nocount on;
 
-	SELECT Code, Model, Make, Variant, Description, Msrp
+	SELECT Id, Code, Model, Make, Variant, Description, Msrp
 	FROM dbo.Items
 end

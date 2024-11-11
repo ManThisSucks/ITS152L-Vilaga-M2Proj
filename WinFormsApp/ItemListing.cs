@@ -48,7 +48,7 @@ namespace WinFormsApp
 
             foreach (ItemModel item in items)
             {
-                var listViewItem = new ListViewItem(item.Id.ToString());
+                var listViewItem = new ListViewItem($"{item.Id}");
                 listViewItem.SubItems.Add(item.Code);
                 listViewItem.SubItems.Add($"{item.Make} {item.Model}");
                 listViewItem.SubItems.Add(item.Variant);
