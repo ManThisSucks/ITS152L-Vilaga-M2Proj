@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ItemDetails));
             itemPicture = new PictureBox();
             brandLabel = new Label();
             nameLabel = new Label();
@@ -40,10 +41,11 @@
             // 
             // itemPicture
             // 
+            itemPicture.Image = (Image)resources.GetObject("itemPicture.Image");
             itemPicture.Location = new Point(3, 3);
             itemPicture.Name = "itemPicture";
             itemPicture.Size = new Size(186, 180);
-            itemPicture.SizeMode = PictureBoxSizeMode.CenterImage;
+            itemPicture.SizeMode = PictureBoxSizeMode.Zoom;
             itemPicture.TabIndex = 0;
             itemPicture.TabStop = false;
             // 
@@ -74,7 +76,8 @@
             priceLabel.Name = "priceLabel";
             priceLabel.Size = new Size(186, 19);
             priceLabel.TabIndex = 3;
-            priceLabel.Text = "(7500.00 php)";
+            priceLabel.Text = "(13990.00 php)";
+            priceLabel.Click += priceLabel_Click;
             // 
             // tableLayoutPanel2
             // 
@@ -103,9 +106,9 @@
             descLabel.Location = new Point(3, 261);
             descLabel.Margin = new Padding(3, 6, 3, 0);
             descLabel.Name = "descLabel";
-            descLabel.Size = new Size(180, 60);
+            descLabel.Size = new Size(180, 105);
             descLabel.TabIndex = 4;
-            descLabel.Text = "Professional Open-back Studio Headphones. 120 Ohm dynamic transducer, 110dB SPL. 6Hz-38,000Hz";
+            descLabel.Text = "Professional Open-back Studio Headphones. 120 Ohm dynamic transducer, 110dB SPL. 6Hz-38,000Hz\r\n\r\nInput Connector(s): \r\n3.5mm Male\r\n";
             // 
             // ItemDetails
             // 

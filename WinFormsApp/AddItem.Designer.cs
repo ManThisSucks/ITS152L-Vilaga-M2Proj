@@ -193,7 +193,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "AddItem";
-            Text = "Form1";
+            Text = "Add Item";
             ResumeLayout(false);
             PerformLayout();
         }

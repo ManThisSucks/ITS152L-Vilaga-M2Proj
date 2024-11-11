@@ -26,5 +26,10 @@ namespace WinFormsApp
         {
 
         }
+
+        private void priceLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

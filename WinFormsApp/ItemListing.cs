@@ -12,6 +12,8 @@ namespace WinFormsApp
             _db = db;
 
             InitializeComponent();
+
+            refreshTable();
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
@@ -30,7 +32,7 @@ namespace WinFormsApp
                 _db.AddItem(item);
                 refreshTable();
             }
-            
+
         }
 
         private void refreshButton_Click(object sender, EventArgs e)
@@ -43,18 +45,22 @@ namespace WinFormsApp
             itemListView.Items.Clear();
 
             List<ItemModel> items = _db.getItems();
-            
+
             foreach (ItemModel item in items)
             {
-                var listViewItem = new ListViewItem(item.Code);
-                listViewItem.SubItems.Add(item.Model);
-                listViewItem.SubItems.Add(item.Make);
+                var listViewItem = new ListViewItem(item.Id.ToString());
+                listViewItem.SubItems.Add(item.Code);
+                listViewItem.SubItems.Add($"{item.Make} {item.Model}");
                 listViewItem.SubItems.Add(item.Variant);
-                listViewItem.SubItems.Add(item.Description);
                 listViewItem.SubItems.Add(item.Msrp);
 
                 itemListView.Items.Add(listViewItem);
             }
+        }
+
+        private void itemDetails1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
