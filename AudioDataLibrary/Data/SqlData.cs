@@ -41,5 +41,22 @@ namespace AudioDataLibrary.Data
             return _db.LoadData<ItemModel, dynamic>("dbo.spItems_List", new { },
                 connectionStringName, true).ToList();
         }
+
+        public void UpdateItem(ItemModel item)
+        {
+            _db.SaveData<dynamic>(
+                "dbo.spItems_Update",
+                new { item.Id, item.Code, item.Model, item.Make, item.Variant, item.Description, item.Msrp },
+                connectionStringName,
+                true);
+        }
+        public void DeleteItem(int id)
+        {
+            _db.SaveData<dynamic>(
+                "dbo.spItems_Delete",
+                new { Id = id },
+                connectionStringName,
+                true);
+        }
     }
 }

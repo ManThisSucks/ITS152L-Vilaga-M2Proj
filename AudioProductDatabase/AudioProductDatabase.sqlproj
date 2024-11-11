@@ -68,6 +68,8 @@
     <Build Include="dbo\Tables\ItemInputs.sql" />
     <Build Include="dbo\Stored Procedures\spItems_Add.sql" />
     <Build Include="dbo\Stored Procedures\spItems_List.sql" />
+    <Build Include="dbo\Stored Procedures\spItems_Delete.sql" />
+    <Build Include="dbo\Stored Procedures\spItems_Update.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="AudioProductDatabase.refactorlog" />
